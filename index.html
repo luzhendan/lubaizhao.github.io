@@ -1,108 +1,125 @@
 <!doctype html>
 <html lang="zh-CN">
-	<head>
-		<meta charset="utf-8" />
-		<!-- 替换为通用图标 -->
-		<link rel="icon" type="image/png" sizes="512x512" href="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" />
-		<link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" />
-		<link rel="apple-touch-icon" sizes="512x512" href="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" />
-		
-		<!-- 基础元信息 -->
-		<meta name="apple-mobile-web-app-title" content="我的静态网页" />
-		<meta name="description" content="这是一个纯静态的HTML网页，可以在GitHub Pages上正常显示" />
-		<meta name="keywords" content="静态网页, GitHub Pages, HTML, CSS, JavaScript" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover" />
-		<meta name="theme-color" content="#F4F6F8" />
-		
-		<title>我的静态网页</title>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>我的作品集 | GitHub Pages</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+        body {
+            background: #f8fafc;
+            color: #1e293b;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        h1 {
+            font-size: 2.5rem;
+            color: #0f172a;
+            margin-bottom: 0.5rem;
+        }
+        .subtitle {
+            font-size: 1.1rem;
+            color: #64748b;
+        }
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+        .project-card {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            transition: transform 0.2s;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+        .project-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #0f172a;
+            margin-bottom: 0.5rem;
+        }
+        .project-desc {
+            color: #475569;
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+        .project-link {
+            display: inline-block;
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 500;
+            margin-right: 1rem;
+        }
+        .project-link:hover {
+            text-decoration: underline;
+        }
+        footer {
+            text-align: center;
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>我的作品集</h1>
+            <p class="subtitle">这里是我做过的一些项目和作品</p>
+        </header>
 
-		<!-- 页面样式 -->
-		<style>
-			/* 全局样式重置 */
-			* {
-				margin: 0;
-				padding: 0;
-				box-sizing: border-box;
-				font-family: "Microsoft YaHei", Arial, sans-serif;
-			}
-			
-			/* 页面主体样式 */
-			body {
-				background-color: #f4f6f8;
-				min-height: 100vh;
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				justify-content: center;
-				color: #333;
-			}
-			
-			/* 标题样式 */
-			.title {
-				font-size: 2.5rem;
-				margin-bottom: 1rem;
-				color: #2c3e50;
-				text-align: center;
-			}
-			
-			/* 描述文本样式 */
-			.description {
-				font-size: 1.2rem;
-				margin-bottom: 2rem;
-				color: #666;
-				text-align: center;
-				max-width: 800px;
-				padding: 0 20px;
-			}
-			
-			/* 卡片容器样式 */
-			.card {
-				background: white;
-				padding: 2rem;
-				border-radius: 12px;
-				box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-				max-width: 800px;
-				width: 90%;
-			}
-			
-			/* 响应式适配 */
-			@media (max-width: 768px) {
-				.title {
-					font-size: 2rem;
-				}
-				
-				.description {
-					font-size: 1rem;
-				}
-			}
-		</style>
-	</head>
+        <div class="projects">
+            <!-- 项目1：你可以直接改这里的文字和链接 -->
+            <div class="project-card">
+                <h3 class="project-title">静态网页示例</h3>
+                <p class="project-desc">
+                    这是我用纯 HTML/CSS/JS 做的第一个静态网页，部署在 GitHub Pages 上。
+                </p>
+                <a href="https://luzhendan.github.io/lubaizhao.github.io/" class="project-link" target="_blank">查看在线演示</a>
+                <a href="https://github.com/luzhendan/lubaizhao.github.io" class="project-link" target="_blank">查看源码</a>
+            </div>
 
-	<body>
-		<!-- 页面主要内容 -->
-		<div class="card">
-			<h1 class="title">🎉 我的静态网页</h1>
-			<p class="description">
-				这个网页是纯静态的 HTML/CSS/JavaScript 编写的，不依赖任何后端服务，
-				可以在 GitHub Pages 上正常显示。你可以在这里添加任何静态内容，比如文本、图片、链接等。
-			</p>
-		</div>
+            <!-- 项目2：复制这个块，就能加更多项目 -->
+            <div class="project-card">
+                <h3 class="project-title">Z.ai 前端界面</h3>
+                <p class="project-desc">
+                    复刻 Z.ai 的聊天界面，纯前端实现，展示 UI 设计与交互能力。
+                </p>
+                <a href="#" class="project-link" target="_blank">查看在线演示</a>
+                <a href="#" class="project-link" target="_blank">查看源码</a>
+            </div>
 
-		<!-- 简单的前端交互脚本 -->
-		<script>
-			// 页面加载完成后的欢迎提示
-			window.addEventListener('DOMContentLoaded', () => {
-				console.log('✅ 静态网页加载完成！');
-				
-				// 给标题添加简单的动画效果
-				const title = document.querySelector('.title');
-				title.style.opacity = '0';
-				title.style.transition = 'opacity 1s ease-in-out';
-				
-				setTimeout(() => {
-					title.style.opacity = '1';
-				}, 300);
-			});
-		</script>
-	</body>
+            <!-- 项目3：复制这个块，就能加更多项目 -->
+            <div class="project-card">
+                <h3 class="project-title">个人博客</h3>
+                <p class="project-desc">
+                    记录学习和生活的博客，使用 Markdown + 静态页面生成。
+                </p>
+                <a href="#" class="project-link" target="_blank">查看在线演示</a>
+                <a href="#" class="project-link" target="_blank">查看源码</a>
+            </div>
+        </div>
+
+        <footer>
+            <p>© 2026 我的作品集 | 托管在 GitHub Pages</p>
+        </footer>
+    </div>
+</body>
 </html>
